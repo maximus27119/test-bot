@@ -4,7 +4,7 @@ const checkURLResponseStatus = async (url) => {
     let result;
 
     try{
-        result = await fetch(url, { timeout: 2000 });
+        result = await fetch(url, { timeout: 2000, redirect: 'manual' });
         console.log(result);
     }catch(e){
         const error = e.message;
